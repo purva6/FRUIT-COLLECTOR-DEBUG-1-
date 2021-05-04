@@ -38,15 +38,16 @@ class Form{
             player.index = playerCount;
             player.update();
             player.updateCount(playerCount);
-            this.greeting.html("get ready to play" + player.name)
+            this.greeting.html("waiting for players.....")
             this.greeting.position(400,250);
-            this.greeting.style('color', 'blac');
-            this.greeting.style('font-size', '100px');
+            this.greeting.style('color', 'black');
+            this.greeting.style('font-size', '10px');
         });
 
         this.reset.mousePressed(() => {
             player.updateCount(0);
             game.update(0);
+            
         });
 
     }
