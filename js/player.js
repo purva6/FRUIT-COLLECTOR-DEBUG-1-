@@ -35,5 +35,16 @@ class Player {
         })
     }
 
+ getState(){
+     var getStateRef = database.ref('gameState');
+     getStateRef.on("value",function(data) {
+     gameState=data.val();
+
+     var playerInfoRef = database.ref('players');
+            playerInfoRef.remove();
+     })
     
-}
+
+     }
+ }   
+
